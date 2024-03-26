@@ -4,15 +4,14 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='TPC_Error',
+    name='TPC_Duplicate',
     version="1.0.0",#__version__,
 
-    url='https://github.com/Themadhood/Error',
+    url='https://github.com/Themadhood/Duplicate',
     author='Themadhood Pequot',
     author_email='themadhoodpequot@gmail.com',
 
     packages=find_packages(),
-    #py_modules=['Error'],
 
     install_requires=[
         "gspread",#manipulates google sheets
