@@ -1,11 +1,14 @@
-#program:       CopyFormatsBlank
-#purpose:       
-#progamer:      Themadhood Pequot 1/11/2024
-
-_FILE = "Duplicate.Blank.CopyFormatsBlank"
-_VERSION = "0.0.1"
+__Program__     = "Duplicate.Blank.CopyFormatsBlank"    
+__programer__   = "Themadhood Pequot"
+__Date__        = "1/11/2024"
+__Version__     = "0.0.2"
+__update__      = ""
+__info__        = ""
 
 import Error
+#compile PYsInfo
+VersionLst = [f"{__Program__}: {__Version__}"]
+VersionLst += Error.VersionLst
 
 def CopyFormatsBlank(var):
     st = Error.time.time()
@@ -42,7 +45,7 @@ def CopyFormatsBlank(var):
             
         Error.Log(f"writing usable py runtime: {Error.LenTime(st)}\n","Log.txt")
     except Exception as e:
-        Error.UploadError([_FILE,_VERSION,"","CopyFormatsBlank",
+        Error.UploadError([__Program__,__Version__,"","CopyFormatsBlank",
                            f"failed to make a blank copy",e],"Functions")
         Error.Log(f"\nError ocured: {e}","Log.txt")
     return retar
@@ -67,7 +70,7 @@ def Copy_lstBlank(lst):
                 Error.Log(f"formating object","Log.txt")
                 retar.append(Copy_objBlank(o))
     except Exception as e:
-        Error.UploadError([_FILE,_VERSION,"","Copy_lstBlank",
+        Error.UploadError([__Program__,__Version__,"","Copy_lstBlank",
                            f"filed to make blank list copy",e],"Functions")
     return retar
 
@@ -104,7 +107,7 @@ def Copy_dctBlank(dct):
                 Error.Log(f"formating other","Log.txt")
                 retar.update({k:dct[k]})
     except Exception as e:
-        Error.UploadError([_FILE,_VERSION,"","Copy_dctBlank",
+        Error.UploadError([__Program__,__Version__,"","Copy_dctBlank",
                            f"filed to make blank dict",e],"Functions")
     return retar
 
@@ -128,7 +131,7 @@ def Copy_setBlank(st):
                 Error.Log(f"formating object","Log.txt")
                 retar.add(Copy_objBlank(o))
     except Exception as e:
-        Error.UploadError([_FILE,_VERSION,"","Copy_setBlank",
+        Error.UploadError([__Program__,__Version__,"","Copy_setBlank",
                            f"filed to make blank list copy",e],"Functions")
     return retar
 
@@ -139,7 +142,7 @@ def Copy_objBlank(obj):
 
         retar = tuple(retar)
     except Exception as e:
-        Error.UploadError([_FILE,_VERSION,"","Copy_objBlank",
+        Error.UploadError([__Program__,__Version__,"","Copy_objBlank",
                            f"filed to format to object",e],"Functions")
     return retar
 
@@ -147,8 +150,8 @@ def Copy_objBlank(obj):
 
 
 
-if __name__=="__main__":
-    pass
+if __name__ == "__main__":
+    Error.VersionRecordsLog(pyName=__Program__,msg=VersionLst)
 
 
 

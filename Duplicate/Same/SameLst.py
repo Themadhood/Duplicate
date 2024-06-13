@@ -1,12 +1,15 @@
 __Program__     = "Duplicate.Same.SameLst"    
 __programer__   = "Themadhood Pequot"
 __Date__        = "2/21/2024"
-__version__     = "0.0.1"
+__Version__     = "0.0.1"
 __update__      = ""
 __info__        = ""   
 
 import Error
 
+#compile PYsInfo
+VersionLst = [f"{__Program__}: {__Version__}"]
+VersionLst += Error.VersionLst
 #st = Error.time.time()
 #Error.LenTime(st)
 #Error.Log(f"","Log.txt")
@@ -27,7 +30,7 @@ def SamelstDifrentOrder(lst1,lst2,error=False):
     except Exception as e:
         if error:
             raise
-        Error.UploadError([__Program__,__version__,"","SamelstDifrentOrder",
+        Error.UploadError([__Program__,__Version__,"","SamelstDifrentOrder",
                            f"error cheking if list are the same",e],"Functions")
 
 def RemoveEqivlentLsts(lstOfLsts,error=False):
@@ -48,13 +51,14 @@ def RemoveEqivlentLsts(lstOfLsts,error=False):
     except Exception as e:
         if error:
             raise
-        Error.UploadError([__Program__,__version__,"","_RemoveDuplicatLst",
+        Error.UploadError([__Program__,__Version__,"","_RemoveDuplicatLst",
                                     f"failed to remove duplicats",e],"Functions")
     return retar
     
 
 
 if __name__ == "__main__":
+    Error.VersionRecordsLog(pyName=__Program__,msg=VersionLst)
     ShrinkExpreshon("aBC + AbC + ABc + ABC")
     "BC + AC + AB"
 

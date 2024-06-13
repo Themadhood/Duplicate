@@ -1,13 +1,14 @@
-#program:       CntSameStr
-#purpose:       count same strings in lst
-#progamer:      Themadhood Pequot 11/2/2023
-
-#presets
-_FILE = "Duplicate.Same.CntSameStr"
-_VERSION = "0.0.1"
+__Program__     = "Duplicate.Same.CntSameStr"    
+__programer__   = "Themadhood Pequot"
+__Date__        = "11/2/2024"
+__Version__     = "0.0.2"
+__update__      = ""
+__info__        = ""
 
 import Error
-
+#compile PYsInfo
+VersionLst = [f"{__Program__}: {__Version__}"]
+VersionLst += Error.VersionLst
 
 def CntSameStr(lstofstrs):
     Error.Log(f"counting string duplicats","Log.txt")
@@ -25,6 +26,7 @@ def CntSameStr(lstofstrs):
 
 
 if __name__ == "__main__":
+    Error.VersionRecordsLog(pyName=__Program__,msg=VersionLst)
     lst = ["a","c","b","a","a","e","b","e","a","e","a"]
     dct = CntSameStr(lst)
     print(dct)

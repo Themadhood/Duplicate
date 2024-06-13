@@ -1,11 +1,13 @@
-#program:       CopyFormats
-#purpose:       
-#progamer:      Themadhood Pequot 1/11/2024
-
-_FILE = "Duplicate.Clone.CopyFormats"
-_VERSION = "0.0.1"
+__Program__     = "Duplicate.Clone.CopyFormats"    
+__Programer__   = "Themadhood Pequot"
+__Date__        = "1/11/2024"
+__Version__     = "0.0.2"
+__Update__      = ""
+__Info__        = ""   
 
 import Error
+VersionLst = [f"{__Program__}: {__Version__}"]
+VersionLst += Error.VersionLst
 
 def CopyFormats(var):
     st = Error.time.time()
@@ -34,7 +36,7 @@ def CopyFormats(var):
             
         Error.Log(f"writing usable py runtime: {Error.LenTime(st)}\n","Log.txt")
     except Exception as e:
-        Error.UploadError([_FILE,_VERSION,"","pyFormats",
+        Error.UploadError([__Program__,__Version__,"","pyFormats",
                            f"failed to format and write py",e],"Functions")
         Error.Log(f"\nError ocured: {e}","Log.txt")
     return retar
@@ -63,7 +65,7 @@ def Copy_lst(lst):
                 Error.Log(f"formating other","Log.txt")
                 retar.append(o)
     except Exception as e:
-        Error.UploadError([_FILE,_VERSION,"","copy_lst",
+        Error.UploadError([__Program__,__Version__,"","copy_lst",
                            f"filed to format to list",e],"Functions")
     return retar
 
@@ -91,7 +93,7 @@ def Copy_dct(dct):
                 Error.Log(f"formating other","Log.txt")
                 retar.update({k:dct[k]})
     except Exception as e:
-        Error.UploadError([_FILE,_VERSION,"","copy_dct",
+        Error.UploadError([__Program__,__Version__,"","copy_dct",
                            f"filed to format to dict",e],"Functions")
     return retar
 
@@ -119,7 +121,7 @@ def Copy_set(st):
                 Error.Log(f"formating other","Log.txt")
                 retar.add(i)
     except Exception as e:
-        Error.UploadError([_FILE,_VERSION,"","Copy_set",
+        Error.UploadError([__Program__,__Version__,"","Copy_set",
                            f"filed to format to set",e],"Functions")
     return retar
 
@@ -129,7 +131,7 @@ def Copy_obj(obj):
 
         retar = tuple(retar)
     except Exception as e:
-        Error.UploadError([_FILE,_VERSION,"","py_obj",
+        Error.UploadError([__Program__,__Version__,"","py_obj",
                            f"filed to format to object",e],"Functions")
     return retar
 

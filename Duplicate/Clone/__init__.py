@@ -1,7 +1,7 @@
 __Program__     = "Duplicate.Clone.__init__"    
 __programer__   = "Themadhood Pequot"
 __Date__        = "2/27/2024"
-__version__     = "0.0.1"
+__Version__     = "0.0.1"
 __update__      = ""
 __info__        = ""   
 
@@ -10,12 +10,16 @@ try:
 except:
     import CopyFormats
 
+VersionLst = [f"{__Program__}: {__Version__}"]
+VersionLst += CopyFormats.VersionLst
+
 Error = CopyFormats.Error
 
 
 
 
-
+if __name__ == "__main__":
+    Error.VersionRecordsLog(pyName=__Program__,msg=VersionLst)
 
 
 
